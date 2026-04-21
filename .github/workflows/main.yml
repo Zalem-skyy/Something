@@ -1,0 +1,15 @@
+name: Basic CI Workflow
+on:
+  push:
+    branches:["main"]
+  pull_request:
+    branches:["main"]
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        -name: CHeckout Repository
+        uses: actions/checkout@v3
+        -name: Display Message
+        run: echo "Hello, from Github Actions!"
+        
